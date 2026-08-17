@@ -2,47 +2,42 @@
 
 ## 📌 Project Overview
 
-This project analyzes customer shopping behavior using **Python, Pandas, MySQL, and Power BI**.
+This project analyzes customer shopping behavior to identify purchasing patterns, revenue trends, product performance, customer spending segments, and other business insights.
 
-The objective is to transform raw customer purchase data into meaningful business insights related to **sales performance, customer spending behavior, product performance, seasonal trends, customer segments, and discount impact**.
-
-The project follows a complete data analytics workflow:
-
-**Data Cleaning → Exploratory Data Analysis → SQL Business Analysis → Power BI Dashboard → Business Insights**
+The analysis was performed using **Python, SQL, and Power BI** to transform raw customer transaction data into meaningful business insights.
 
 ---
 
-## 🎯 Business Objective
+## 🎯 Project Objectives
 
-The main objective of this project is to understand customer purchasing patterns and identify insights that can help businesses make better decisions related to:
+The main objectives of this project are:
 
-- Product performance
-- Revenue generation
-- Customer spending behavior
-- Seasonal sales trends
-- Customer demographics
-- Discounts and promotions
-- Purchasing frequency
+- Analyze overall customer purchasing behavior
+- Identify high-revenue product categories
+- Analyze revenue across different seasons
+- Compare customer spending patterns
+- Identify top-performing products
+- Analyze customer behavior by age group and gender
+- Understand the impact of discounts on revenue
+- Create an interactive Power BI dashboard
+- Provide business insights that can support decision-making
 
 ---
 
 ## 🛠️ Tools & Technologies
 
-| Tool | Purpose |
-|---|---|
-| 🐍 Python | Data cleaning and exploratory analysis |
-| 🐼 Pandas | Data manipulation and analysis |
-| 🗄️ MySQL | Business-focused SQL analysis |
-| 📊 Power BI | Dashboard development and visualization |
-| 📁 CSV | Source dataset |
+- **Python**
+- **Pandas**
+- **SQL / MySQL**
+- **Power BI**
+- **DAX**
+- **Data Visualization**
 
 ---
 
-## 📂 Dataset
+## 📊 Dataset
 
-The dataset contains **3,900 customer purchase records** and **18 columns**.
-
-### Important attributes include:
+The dataset contains **3,900 customer purchase records** and includes information such as:
 
 - Customer ID
 - Age
@@ -65,73 +60,55 @@ The dataset contains **3,900 customer purchase records** and **18 columns**.
 
 ---
 
-# 🐍 Python & Pandas Analysis
+## 🐍 Python / Pandas Analysis
 
 Python and Pandas were used for:
 
-- Loading the dataset
-- Understanding the dataset structure
-- Checking data types
-- Identifying missing values
-- Checking duplicate records
-- Performing basic statistical analysis
-- Cleaning and preparing the dataset for SQL analysis
+- Data loading and inspection
+- Data cleaning
+- Handling missing values
+- Exploratory data analysis
+- Customer segmentation
+- Aggregation and statistical analysis
+- Identifying purchasing patterns
 
-The cleaned dataset was then imported into MySQL for further business analysis.
+The complete Python analysis is available in:
 
----
-
-# 🗄️ SQL Analysis
-
-MySQL was used to perform business-oriented analysis on customer shopping behavior.
-
-The analysis covered topics such as:
-
-- Total number of purchases
-- Average purchase amount
-- Total revenue
-- Revenue by product category
-- Highest-revenue products
-- Revenue by season
-- Revenue by age group
-- Customer spending segmentation
-- Discount vs. non-discount revenue
-- Customer purchasing behavior
-- Subscription behavior
-- Purchase frequency
-- Ranking and comparative analysis
-
-### SQL concepts used
-
-- SELECT
-- WHERE
-- CASE
-- GROUP BY
-- HAVING
-- ORDER BY
-- Aggregate Functions
-- JOIN
-- Subqueries
-- CTEs
-- Window Functions
-- Conditional Logic
+**`customer_shopping_analysis.ipynb`**
 
 ---
 
-# 📊 Power BI Dashboard
+## 🗄️ SQL Analysis
 
-The Power BI dashboard provides an interactive overview of customer shopping behavior and business performance.
+SQL was used to answer business-related questions such as:
 
-### Key KPIs
+- What is the total number of customers?
+- What is the average purchase amount?
+- What is the total revenue?
+- Which product categories generate the highest revenue?
+- Which products generate the highest revenue?
+- How does revenue vary across customer groups?
+- How do discounts affect revenue?
+- Which customer segments contribute the most revenue?
+
+The complete SQL queries are available in:
+
+**`customer_shopping_analysis.sql`**
+
+---
+
+## 📈 Power BI Dashboard
+
+The Power BI dashboard provides a visual summary of the customer shopping analysis.
+
+### Key Dashboard Metrics
 
 - **Total Revenue:** $233K
-- **Total Purchases:** 3,900
-- **Average Purchase:** $59.76
+- **Total Purchases:** 4K
 - **Average Rating:** 3.75
+- **Average Purchase:** $59.76
 
-### Dashboard Analysis
-
-The dashboard includes:
+### Dashboard Analysis Includes
 
 - Revenue by Product Category
 - Revenue by Season
@@ -140,61 +117,68 @@ The dashboard includes:
 - Customer Spending Segments
 - Revenue by Discount Status
 
+### Dashboard Preview
+
+![Customer Shopping Dashboard](customer_shopping_dashboard.png)
+
 ---
 
-## 🔍 Key Business Insights
+## 🔍 Key Insights
 
-### 💰 Overall Performance
+### 💰 Revenue by Category
 
-The dataset contains **3,900 purchase transactions** generating approximately **$233K in total revenue**.
+**Clothing** generated the highest revenue among all product categories, followed by Accessories, Footwear, and Outerwear.
 
-### 👕 Product Category
+### 🛍️ Top Product
 
-**Clothing** generated the highest revenue among the product categories.
+**Blouse** was the highest-revenue product with approximately **$10,410** in revenue.
+
+### 👥 Customer Spending
+
+The **High Spender** segment contributed the largest share of revenue compared with Medium and Low Spenders.
 
 ### 🍂 Seasonal Performance
 
-**Fall** recorded the highest revenue among the analyzed seasons.
+**Fall** generated the highest seasonal revenue, while Summer generated the lowest among the four seasons.
 
-### 👥 Age Group
+### 🎟️ Discount Analysis
 
-The **Young Adult** segment generated the highest revenue among the analyzed age groups.
+Customers without discounts generated higher total revenue than customers who received discounts.
 
-### 🛍️ Product Performance
+### 👤 Age Group
 
-**Blouse** was identified as the highest-revenue product among the Top 10 products.
-
-### 💳 Spending Segments
-
-Customers were classified into:
-
-- Low Spenders
-- Medium Spenders
-- High Spenders
-
-High Spenders represented the largest share of purchase transactions.
-
-### 🏷️ Discount Analysis
-
-Non-discounted purchases generated higher total revenue than discounted purchases in this dataset.
+The **Young Adult** customer group generated the highest revenue among the analyzed age groups.
 
 ---
 
-# 📁 Project Structure
+## 💡 Business Recommendations
 
-```text
-customer-shopping-behavior-analysis/
-│
-├── README.md
-│
-├── python/
-│   └── customer_shopping_analysis.ipynb
-│
-├── sql/
-│   └── customer_shopping_analysis.sql
-│
-├── powerbi/
-│   └── customer_shopping_dashboard.pbix
-│
-└── images/
-    └── customer-shopping-dashboard.png
+Based on the analysis:
+
+- Focus marketing efforts on high-spending customers.
+- Promote high-performing products such as Blouse, Shirt, and Dress.
+- Use seasonal campaigns to increase sales during lower-performing seasons.
+- Analyze discount strategies carefully because higher discount usage did not result in higher total revenue.
+- Develop targeted marketing campaigns for different customer age groups.
+- Use customer purchasing behavior to create personalized promotions.
+
+---
+
+## 📁 Project Files
+
+| File | Description |
+|------|-------------|
+| `customer_shopping_analysis.ipynb` | Python and Pandas analysis |
+| `customer_shopping_analysis.sql` | MySQL business analysis queries |
+| `customer_shopping_dashboard.png` | Power BI dashboard preview |
+| `customer_shopping_dashboard.pbix` | Power BI dashboard file |
+| `README.md` | Project documentation |
+
+---
+
+## 👩‍💻 Author
+
+**Komal Verma**
+
+Data Analyst | Python | SQL | Power BI | Excel
+
